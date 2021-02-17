@@ -1,3 +1,10 @@
-body{
-    background: black;
+@import "libs/mixins.scss";
+@import "libs/functions.scss";
+@import "libs/responsive.scss";
+
+
+
+body {
+    background: blue;
 }
+

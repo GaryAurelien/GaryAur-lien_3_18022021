@@ -1,0 +1,7 @@
+//  @include la-mixins-que-je-veut-utiliser;
+
+@mixin center() {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
