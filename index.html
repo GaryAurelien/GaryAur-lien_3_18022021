@@ -1,13 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/cd87985c5c.js" crossorigin="anonymous"></script>
+    <title>Ohmyfood</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <header class="header">
+        <div class="header_logo_ohmyfood"><img src="public/img/logo/ohmyfood@2x.svg" alt="logo_ohmyfood" /></div>
+        <div class="header_recherche">
+            <div class="fas fa-map-marker-alt"></div>
+            <input class="imput" type="search" placeholder="Paris, Belleville" />
+        </div>
+        <h1>Réservez le menu qui vous convient</h1>
+        <p>Découvrez des restaurants d'execption, séléctionnés par nos soin.</p>
+        <div class="conteneur_btn_header">
+            <div class="btn_header">
+                <span>Explorer nos restaurants</span>
+            </div>
+        </div>
+    </header>
+    <main class=main>
+        <div class=conteneur_fonctionnement>
+            <h1>Fonctionnement</h1>
+            <div class="conteneur_card_fonct">
+            <a class="filtre_card" href="#">
+                <div class="div_filtre"><i class="fas fa-mobile-alt icon_filtre"></i></div>
+                <span>Choisissez un restaurant</span>
+            </a>
+            <a class="filtre_card" href="#">
+                <div class="div_filtre"><i class="fas fa-list-ul icon_filtre"></i></div>
+                <span>Composez votre menu</span>
+            </a>
+            <a class="filtre_card" href="#">
+                <div class="div_filtre"><i class="fas fa-heart icon_filtre"></i></div>
+                <span>Dégustez au restaurant</span>
+            </a>
+            </div>
+        </div>
+        <div class=conteneur_restaurants>
+            <h1>Restaurants</h1>
+            <div class="conteneur_card">
+                <a href="#" class="card">
+                    <div class="menu_1"></div>
+                    <div class="card_text">
+                        <h2>La palette du goût</h2>
+                        <p>Ménilmontant</p>
+                        <i class="far fa-heart coeur_acceuil"></i>
+                    </div>
+                </a>
+                <a href="#" class="card">
+                    <div class="menu_2"></div>
+                    <div class="card_text">
+                        <h2>La note enchantée</h2>
+                        <p>Charonne</p>
+                        <i class="far fa-heart coeur_acceuil"></i>
+                    </div>
+                </a>
+                <a href="#" class="card">
+                    <div class="menu_3"></div>
+                    <div class="card_text">
+                        <h2>À la française</h2>
+                        <p>Cité Rouge</p>
+                        <i class="far fa-heart coeur_acceuil"></i>
+                    </div>
+                </a>
+                <a href="#" class="card">
+                    <div class="menu_4"></div>
+                    <div class="card_text">
+                        <h2>Le délice des sens</h2>
+                        <p>Folie-Méricourt</p>
+                        <i class="far fa-heart coeur_acceuil"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer class=footer>
+        <div class="packfooter">
+            <div class="pack">
+                <h1>ohmyfood</h1>
+                <div class="div_footer"><a class="a_footer" href="#">
+                        <i class="fas fa-utensils icon_footer1"></i>
+                        <p>Proposer un restaurant</p>
+                    </a>
+                </div>
+                <div class="div_footer"><a class="a_footer" href="#">
+                        <i class="fas fa-hands-helping icon_footer2"></i>
+                        <p>Devenir partenaire</p>
+                    </a>
+                </div>
+                <div class="div_footer"><a class="a_footer" href="#">
+                        <p>Mention légales</p>
+                    </a>
+                </div>
+                <div class="div_footer"><a class="a_footer" href="#">
+                        <p>Contact</p>
+                    </a>
+                </div>
+            </div>
+    </footer>
+
+
 </body>
+
 </html>
