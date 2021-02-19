@@ -20,53 +20,58 @@ h1 {
 
 p,
 span {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 body {
   margin: 0%;
 }
 
-.header h1 {
+.header h1, .header_menu h1 {
   width: 80%;
   display: block;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
-.header p {
+.header p, .header_menu p {
   width: 90%;
   display: block;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
-.header .header_logo_ohmyfood, .header .header_recherche {
+.header .header_logo_ohmyfood, .header_menu .header_logo_ohmyfood, .header .header_recherche, .header_menu .header_recherche {
   width: 100%;
   height: 75px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.header .header_recherche {
+.header .header_recherche, .header_menu .header_recherche {
   background: #eaeaea;
   height: 60px;
 }
-.header .header_recherche .imput {
+.header .header_recherche .imput, .header_menu .header_recherche .imput {
   background: #eaeaea;
   border: none;
   font-weight: bolder;
 }
-.header .fa-map-marker-alt {
-  padding-right: 15px;
+.header .header_recherche #villes_header::placeholder, .header_menu .header_recherche #villes_header::placeholder {
+  color: black;
+  opacity: 80%;
 }
-.header .btn_header {
+.header .fa-map-marker-alt, .header_menu .fa-map-marker-alt {
+  padding-right: 15px;
+  margin-left: 20%;
+}
+.header .btn_header, .header_menu .btn_header {
   display: block;
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0 8px 4px 0 #fff;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
-  background: #9356DC;
+  background-image: linear-gradient(160deg, #FF79DA 0%, #9356DC 100%);
   color: white;
   width: 50%;
   cursor: pointer;
@@ -79,7 +84,7 @@ body {
   text-align: center;
   white-space: nowrap;
 }
-.header .btn_header:hover {
+.header .btn_header:hover, .header_menu .btn_header:hover {
   transform: scale(1.15);
 }
 
@@ -89,8 +94,7 @@ body {
 }
 .main .conteneur_fonctionnement .conteneur_card_fonct {
   width: 100%;
-  height: 425px;
-  border: solid 1px black;
+  height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -111,7 +115,33 @@ body {
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  border: #9356DC solid 1px;
+}
+.main .conteneur_fonctionnement .conteneur_card_fonct .filtre_card .numerotation_filtre1 {
+  border: solid 1px #9356DC;
+  background: #9356DC;
+  color: white;
+  border-radius: 90%;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+}
+.main .conteneur_fonctionnement .conteneur_card_fonct .filtre_card .numerotation_filtre2 {
+  border: solid 1px #9356DC;
+  background: #9356DC;
+  color: white;
+  border-radius: 90%;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+}
+.main .conteneur_fonctionnement .conteneur_card_fonct .filtre_card .numerotation_filtre3 {
+  border: solid 1px #9356DC;
+  background: #9356DC;
+  color: white;
+  border-radius: 90%;
+  width: 25px;
+  height: 25px;
+  text-align: center;
 }
 .main .conteneur_fonctionnement .conteneur_card_fonct .filtre_card .icon_filtre {
   display: flex;
@@ -121,6 +151,7 @@ body {
   height: 50px;
   width: 50px;
   border-radius: 30px;
+  color: gray;
 }
 .main .conteneur_fonctionnement .conteneur_card_fonct .filtre_card .icon_info {
   display: flex;
@@ -143,20 +174,17 @@ body {
   text-decoration: none;
   transform: scale(1.1);
 }
-.main .conteneur_restaurants {
-  border: solid 1px blue;
-}
 .main .conteneur_restaurants .conteneur_card {
+  width: 100%;
   height: 1300px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-content: center;
   margin-bottom: 50px;
-  border: solid 1px blue;
 }
 .main .conteneur_restaurants .card {
-  width: 95%;
+  width: 97%;
   margin: 1.5%;
   box-shadow: 0 4px 4px 0 #1b1010;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -168,7 +196,7 @@ body {
 }
 .main .conteneur_restaurants .card_text {
   color: black;
-  height: 90px;
+  height: 70px;
   line-height: 60%;
   padding: 2%;
   padding-bottom: 15px;
@@ -178,21 +206,28 @@ body {
 .main .conteneur_restaurants .card_text h2 {
   font-size: 19px;
 }
+.main .conteneur_restaurants .card_text .coeur_acceuil {
+  float: right;
+}
 .main .conteneur_restaurants .menu_1,
-.main .conteneur_restaurants .menu_2,
 .main .conteneur_restaurants .menu_3,
 .main .conteneur_restaurants .menu_4 {
   background-size: cover;
   background-position: bottom;
   height: 170px;
-  margin: 2%;
+  border-radius: 10px 10px 0 0;
+}
+.main .conteneur_restaurants .menu_2 {
+  background-size: cover;
+  background-position: center;
+  height: 170px;
   border-radius: 10px 10px 0 0;
 }
 .main .conteneur_restaurants .menu_1 {
   background-image: url(public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
 }
 .main .conteneur_restaurants .menu_2 {
-  background-image: url(stil-u2Lp8tXIcjw-unsplash.jpg);
+  background-image: url(public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
 }
 .main .conteneur_restaurants .menu_3 {
   background-image: url(public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
@@ -208,11 +243,9 @@ body {
 .footer .packfooter {
   width: 100%;
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
 }
 .footer .packfooter p {
-  font-size: 24px;
+  font-size: 16px;
 }
 .footer .packfooter h1 {
   font-family: "shrikhand", Impact, "Arial Black", Arial, Verdana, sans-serif;
@@ -229,8 +262,12 @@ body {
   width: 100%;
   height: 40px;
   color: white;
+  padding-right: 1%;
   text-decoration: none;
-  border: solid 1px red;
+  display: flex;
+  border-left: none;
+  justify-content: flex-start;
+  align-items: center;
 }
 .footer .div_footer {
   display: flex;
@@ -238,10 +275,106 @@ body {
   align-items: center;
   justify-content: center;
 }
-.footer .icon_footer {
+.footer .icon_footer1 {
   float: left;
-  padding-top: 30px;
-  margin-right: 20px;
+  padding-right: 20px;
+}
+.footer .icon_footer2 {
+  float: left;
+  padding-right: 12px;
+}
+
+.header_menu .fleche {
+  width: 20px;
+  position: absolute;
+  top: 28px;
+  left: 25px;
+}
+
+.photo_menu_1 {
+  background-size: cover;
+  height: 200px;
+  background-image: url(public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+}
+
+.main_menu .conteneur_menu {
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 30px 30px 0px 0px;
+  border: 1px solid black;
+}
+.main_menu .conteneur_menu .titre_menu {
+  text-align: start;
+}
+.main_menu .conteneur_menu .coeur_menu {
+  width: 20px;
+  position: absolute;
+  top: 298px;
+  left: 295px;
+}
+.main_menu .conteneur_menu h1 {
+  font-size: 26px;
+  font-family: "shrikhand", Impact, "Arial Black", Arial, Verdana, sans-serif;
+}
+.main_menu .conteneur_menu h2 {
+  font-size: 18px;
+  opacity: 50%;
+}
+.main_menu .conteneur_menu .conteneur_card_entrees, .main_menu .conteneur_menu .conteneur_card_desserts, .main_menu .conteneur_menu .conteneur_card_plats {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.main_menu .conteneur_menu .conteneur_card_entrees .filtre_card, .main_menu .conteneur_menu .conteneur_card_desserts .filtre_card, .main_menu .conteneur_menu .conteneur_card_plats .filtre_card {
+  box-shadow: 0 8px 4px 0 #fff;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 80px;
+  color: black;
+  border-radius: 25px;
+  padding-right: 1%;
+  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  border-left: none;
+}
+.main_menu .conteneur_menu .conteneur_card_entrees .filtre_card h3, .main_menu .conteneur_menu .conteneur_card_desserts .filtre_card h3, .main_menu .conteneur_menu .conteneur_card_plats .filtre_card h3 {
+  font-size: 2px;
+}
+.main_menu .conteneur_menu .conteneur_card_entrees .filtre_card span, .main_menu .conteneur_menu .conteneur_card_desserts .filtre_card span, .main_menu .conteneur_menu .conteneur_card_plats .filtre_card span {
+  font-size: 5px;
+  opacity: 50%;
+}
+.main_menu .conteneur_menu .conteneur_card_entrees .filtre_card .prix, .main_menu .conteneur_menu .conteneur_card_desserts .filtre_card .prix, .main_menu .conteneur_menu .conteneur_card_plats .filtre_card .prix {
+  float: right;
+  font-size: 10px;
+  font-weight: bolder;
+}
+.main_menu .conteneur_menu .btn_menu {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 8px 4px 0 #fff;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(160deg, #FF79DA 0%, #9356DC 100%);
+  color: white;
+  width: 50%;
+  cursor: pointer;
+  padding: 20px;
+  margin-bottom: 80px;
+  margin-top: 30px;
+  border-radius: 10rem;
+  transform: scale(1);
+  transition: transform 400ms;
+  text-align: center;
+  white-space: nowrap;
+}
+.main_menu .conteneur_menu .btn_menu:hover {
+  transform: scale(1.15);
 }
 
 /*# sourceMappingURL=style.css.map */

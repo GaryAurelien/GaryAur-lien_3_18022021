@@ -14,6 +14,7 @@ $secondary: #FF79DA;
 $tertiaire: #99E2D0;
 $font-grey: #eaeaea;
 
+//accueil
 
 a,
 h1,
@@ -29,7 +30,7 @@ h1{
 
 p,
 span{
-    font-size: 18px;
+    font-size: 16px;
 }
 
 body{
@@ -64,15 +65,20 @@ body{
                     border:none;
                     font-weight: bolder;
                 }
+                #villes_header::placeholder{
+                    color: black;
+                    opacity: 80%;
+                }
         }
         
         .fa-map-marker-alt{
             padding-right: 15px;
+            margin-left: 20%;
         }
         .btn_header {
             @include center;
             @include shadow;
-            background: $primary;
+            background-image: linear-gradient(160deg, $secondary 0%, $primary 100%);
             color: white;
             width: 50%;
             cursor: pointer;
@@ -96,8 +102,7 @@ body{
         .conteneur_fonctionnement{
                 .conteneur_card_fonct{
                     width: 100%;
-                    height: 425px;
-                    border:solid 1px black;
+                    height: 350px;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-around;
@@ -116,7 +121,15 @@ body{
                         justify-content: center;
                         align-items: center;
                         font-weight: bold; 
-                        border: #9356DC solid 1px;  
+                        .numerotation_filtre1 {
+                            @include btn_numero;
+                        }
+                        .numerotation_filtre2 {
+                            @include btn_numero;
+                        }
+                        .numerotation_filtre3 {
+                            @include btn_numero;
+                        }
                         .icon_filtre {
                             display: flex;
                             justify-content: space-around;
@@ -125,7 +138,8 @@ body{
                             height: 50px;
                             width: 50px;
                             border-radius: 30px;
-                            }
+                            color: gray;
+                        }
                         .icon_info {
                             display: flex;
                             align-items: center;
@@ -152,18 +166,17 @@ body{
                 }
         }
         .conteneur_restaurants{
-            border: solid 1px blue;
             .conteneur_card {
+                width: 100%;
                 height: 1300px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
                 align-content: center;
                 margin-bottom: 50px;
-                border: solid 1px blue;
             }
             .card {
-                width: 95%;
+                width: 97%;
                 margin: 1.5%;
                 box-shadow: 0 4px 4px 0 rgb(27, 16, 16);
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2);
@@ -175,7 +188,7 @@ body{
             }
             .card_text {
                 color: black;
-                height: 90px;
+                height: 70px;
                 line-height: 60%;
                 padding: 2%;
                 padding-bottom: 15px;
@@ -185,25 +198,30 @@ body{
                         font-size: 19px;
                     }
                     .coeur_acceuil{
-                        
+                        float:right;  
                     }
                     
             }
             .menu_1,
-            .menu_2,
             .menu_3,
             .menu_4 {
                 background-size: cover;
                 background-position: bottom;
                 height: 170px;
-                margin: 2%;
                 border-radius: 10px 10px 0 0;
-            }          
+            } 
+            .menu_2 {
+                background-size: cover;
+                background-position: center;
+                height: 170px; 
+                border-radius: 10px 10px 0 0;
+            } 
+
             .menu_1 {
                 background-image: url(public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
             }     
             .menu_2 {
-                background-image: url(stil-u2Lp8tXIcjw-unsplash.jpg);
+                background-image: url(public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
             }
             .menu_3 {
                 background-image: url(public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
@@ -219,10 +237,8 @@ body{
         .packfooter {
             width: 100%;
             display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
                 p{
-                    font-size: 24px;
+                    font-size: 16px;
                 }
                 h1{
                     font-family:"shrikhand", Impact, "Arial Black", Arial, Verdana, sans-serif;
@@ -242,8 +258,12 @@ body{
             width: 100%;
             height: 40px;
             color: white;
+            padding-right: 1%;
             text-decoration: none;
-            border: solid 1px red;
+            display: flex;
+            border-left: none;
+            justify-content: flex-start;
+            align-items: center;
         }
         .div_footer{
             display: flex;
@@ -251,13 +271,118 @@ body{
             align-items: center;
             justify-content: center; 
         }
-        .icon_footer{
+        .icon_footer1{
             float: left;
-            padding-top: 30px;
-            margin-right: 20px;
+            padding-right: 20px;
+        }
+
+        .icon_footer2{
+            float: left;
+            padding-right: 12px;
         }
         
 
         
 
+}
+
+//menu_1 a la francaise
+
+.header_menu {
+    @extend .header;
+    .fleche {
+        width: 20px;
+        position: absolute; top: 28px; left: 25px; 
+    }
+
+}
+
+.photo_menu_1{
+    background-size: cover;
+    height: 200px;
+    background-image: url(public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+}
+
+.main_menu{
+    .conteneur_menu{
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 30px 30px 0px 0px;
+        @include border;
+        .titre_menu {
+            text-align: start;
+        }
+        .coeur_menu {
+            width: 20px;
+            position: absolute; top: 298px; left: 295px; 
+        }
+        h1 {
+            font-size: 26px;
+            font-family:"shrikhand", Impact, "Arial Black", Arial, Verdana, sans-serif;   
+        }
+        h2 {
+            font-size: 18px;
+            opacity: 50%;
+        }
+        .conteneur_card_entrees{
+            width: 100%;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 40px;
+            .filtre_card {
+                @include shadow;
+                width: 100%;
+                height: 80px;
+                color: black;
+                border-radius: 25px;
+                padding-right: 1%;
+                text-decoration: none;
+                display: flex;
+                flex-wrap: wrap;
+                border-left: none;
+                    h3 {
+                        font-size: 2px;
+                    }
+                    span {
+                        font-size: 5px;
+                        opacity: 50%;
+                    }
+                    .prix {
+                        float: right;
+                        font-size: 10px;
+                        font-weight: bolder;
+                    }
+                    
+            }
+        }
+        .conteneur_card_plats {
+            @extend .conteneur_card_entrees;
+        
+        }
+        .conteneur_card_desserts {
+            @extend .conteneur_card_entrees;
+        }
+        .btn_menu {
+            @include center;
+                @include shadow;
+                background-image: linear-gradient(160deg, $secondary 0%, $primary 100%);
+                color: white;
+                width: 50%;
+                cursor: pointer;
+                padding: 20px;
+                margin-bottom: 80px;
+                margin-top: 30px;
+                border-radius: 10rem;
+                transform: scale(1);
+                transition: transform 400ms;
+                text-align: center;
+                white-space: nowrap;
+                    &:hover {
+                        transform: scale(1.15);
+                    }
+        }
+    }
 }
