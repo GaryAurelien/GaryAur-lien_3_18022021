@@ -1,15 +1,14 @@
 @import "libs/mixins.scss";
 @import "libs/functions.scss";
 @import "libs/responsive.scss";
-//commentaire scss
-
+    //------------------------------------------//
 @font-face { font-family: "Roboto";
     src: url(Roboto/Roboto-Regular.ttf);
 }
 @font-face { font-family: "shrikhand";
     src: url(shrikhand/Shrikhand-Regular.otf);
 }
-
+    //-------------------------------------------//
 $primary: #9356DC;
 $primary_claire:#9360DC;
 $secondary: #FF79DA; 
@@ -21,10 +20,8 @@ $font-extra: #ebebeb;
 $anim-dur:2000ms;
 $num-bars: 10;
 $anim-delay: $anim-dur / $num-bars;
-
-
-
-//accueil
+    //-------------------------------------------//
+                        //accueil//
 
 a,
 h1,
@@ -37,14 +34,95 @@ span {
 h1{
     font-size: 26px;
 }
-
+@keyframes load {
+    0% {
+      opacity: 0;
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+@keyframes loader_op {
+    0% {
+        opacity: 1;
+      }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+      }
+}
 body{
     background: $font-grey;
     margin: 0%;
     padding: 0%;
 }
+.loading {
+    position:absolute;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    animation: loader_op 3000ms;
+    animation-fill-mode: forwards;
+    transform:scaleX(1);
+    transform-origin: center;
+    font-family: "shrikhand", Impact, "Arial Black", Arial, Verdana, sans-serif;
+    .conteneur_loading {
+        width: 150px;
+        height: 150px;
+        border-radius: 100px;
+        text-align: center;
+        border-right:solid 5px #FF79DA;
+        border-left:solid 5px #9356DC;
+        animation: spin 2000ms infinite;
+        z-index: 2;
+    }
+    .text_loading {
+        height: 20px;
+        width: 75px;
+        color: #99E2D0;
+        position: absolute;
+    }
+}
 
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg); border-width:15px;
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+                        //loader//
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg); border-width:  15px;
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+                        //header//
 .header{
+    animation: load 3000ms;
+    z-index: 1;
         h1 {
             @include center;
             text-align: center;
@@ -140,8 +218,10 @@ body{
             }
         }
 }
-
+                    //main acceuil//           
 .main{
+    animation: load 3000ms;
+    z-index: 1;
         p,
         span{
             font-size: 16px;
@@ -322,6 +402,8 @@ body{
     height: 255px;
     width: 100%;
     background: #353535;
+    animation: load 3000ms;
+    z-index: 1;
         .packfooter {
             width: 100%;
             line-height: 0.1rem;
@@ -371,10 +453,8 @@ body{
         
 
 }
-
-//menu_1 a la francaise
-
-
+                        //menu//
+                    //header_menu//
 .header_menu {
     @extend .header;
     .fleche {
@@ -396,7 +476,7 @@ body{
     object-position: 50% 50%;
 
 }
-
+                    //main_menu//
 .main_menu{
     width: 100%;
     background:$font-extra;
@@ -639,7 +719,7 @@ a {
     }
 }
 }
-
+                    //media_queries//
 @media screen and (min-width:1640px) {
     .conteneur_restaurants {
         @include center;
