@@ -46,6 +46,11 @@ body {
   padding: 0%;
 }
 
+.body_acceuil {
+  animation: load 3000ms;
+  z-index: 1;
+}
+
 .loading {
   position: absolute;
   overflow: hidden;
@@ -103,10 +108,6 @@ body {
   100% {
     transform: rotate(360deg);
   }
-}
-.header, .header_menu {
-  animation: load 3000ms;
-  z-index: 1;
 }
 .header h1, .header_menu h1 {
   display: block;
@@ -203,10 +204,6 @@ body {
   transition: opacity 250ms;
 }
 
-.main {
-  animation: load 3000ms;
-  z-index: 1;
-}
 .main p,
 .main span {
   font-size: 16px;
@@ -288,7 +285,6 @@ body {
   text-decoration: none;
   transform: scale(1.1);
   transition: transform 400ms;
-  background: #f5f3f7;
   background-color: #f2eafb;
 }
 .main .conteneur_fonctionnement .conteneur_card_fonct .filtre_card:hover .icon_filtre {
@@ -395,8 +391,6 @@ body {
   height: 255px;
   width: 100%;
   background: #353535;
-  animation: load 3000ms;
-  z-index: 1;
 }
 .footer .packfooter {
   width: 100%;
@@ -409,7 +403,6 @@ body {
 .footer .packfooter h1 {
   font-family: "shrikhand", Impact, "Arial Black", Arial, Verdana, sans-serif;
   color: white;
-  size: 16px;
   letter-spacing: 2px;
   margin-bottom: 2rem;
 }

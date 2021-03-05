@@ -61,6 +61,10 @@ body{
     margin: 0%;
     padding: 0%;
 }
+.body_acceuil {
+    animation: load 3000ms;
+    z-index: 1;
+}
 .loading {
     position:absolute;
     overflow: hidden;
@@ -94,8 +98,6 @@ body{
         position: absolute;
     }
 }
-
-
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -121,8 +123,6 @@ body{
 }
                         //header//
 .header{
-    animation: load 3000ms;
-    z-index: 1;
         h1 {
             @include center;
             text-align: center;
@@ -220,8 +220,6 @@ body{
 }
                     //main acceuil//           
 .main{
-    animation: load 3000ms;
-    z-index: 1;
         p,
         span{
             font-size: 16px;
@@ -290,7 +288,6 @@ body{
                             text-decoration: none;
                             transform: scale(1.1);
                             transition: transform 400ms;
-                            background: $quaternary;
                             background-color: #f2eafb;
                             .icon_filtre {
                                 color: #9356DC;
@@ -402,8 +399,6 @@ body{
     height: 255px;
     width: 100%;
     background: #353535;
-    animation: load 3000ms;
-    z-index: 1;
         .packfooter {
             width: 100%;
             line-height: 0.1rem;
@@ -414,7 +409,6 @@ body{
                 h1{
                     font-family:"shrikhand", Impact, "Arial Black", Arial, Verdana, sans-serif;
                     color: white;
-                    size: 16px;
                     letter-spacing: 2px;
                     margin-bottom: 2rem;
                 }
