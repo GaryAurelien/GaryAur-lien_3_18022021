@@ -390,10 +390,11 @@ body{
 }
 
 .photo_menu_1{
-    object-position: cover;
-    height: 400px;
+    object-fit: cover;
+    height: 300px;
     width: 100%;
     object-position: 50% 50%;
+
 }
 
 .main_menu{
@@ -659,8 +660,12 @@ a {
     }
     .main_menu {
         background:$font-extra;
-        width: 1220px;
+        width: 50%;
+        min-width: 1220px;
         @include center;
+    }
+    .photo_menu_1 {
+        height: 600px;
     }
 }
 

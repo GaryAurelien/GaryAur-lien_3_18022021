@@ -366,8 +366,8 @@ body {
 }
 
 .photo_menu_1 {
-  object-position: cover;
-  height: 400px;
+  object-fit: cover;
+  height: 300px;
   width: 100%;
   object-position: 50% 50%;
 }
@@ -652,10 +652,15 @@ body {
 
   .main_menu {
     background: #ebebeb;
-    width: 1220px;
+    width: 50%;
+    min-width: 1220px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .photo_menu_1 {
+    height: 600px;
   }
 }
 
