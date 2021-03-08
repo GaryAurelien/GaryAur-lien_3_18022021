@@ -45,6 +45,7 @@ h1{
       opacity: 1;
     }
 }
+                    //keyframes loader//
 @keyframes loader_op {
     0% {
         opacity: 1;
@@ -54,7 +55,9 @@ h1{
     }
     100% {
         opacity: 0;
-      }
+        display: none;
+        top: -9999px;    
+    }
 }
 body{
     background: $font-grey;
@@ -98,18 +101,7 @@ body{
         position: absolute;
     }
 }
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    50% {
-        transform: rotate(180deg); border-width:15px;
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-                        //loader//
+                        //spin loader//
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -156,7 +148,6 @@ body{
                 .imput{
                     width: 175px;
                     margin-left: 5px;
-                    font-size: 10px;
                     background:$font-extra;
                     border:none;
                     font-weight: bolder;
@@ -240,32 +231,38 @@ body{
                     margin-bottom: 40px;
                     .filtre_card {
                         @include shadow;
-                        width: 280px;
+                        width: 240px;
                         height: 60px;
                         color: black;
                         margin-bottom: 20px;
                         border-radius: 30px;
                         text-decoration: none;
                         display: flex;
-                        justify-content: center;
+                        justify-content: flex-start;
                         align-items: center;
                         font-weight: bold;
-                        position: relative;            
+                        position: relative;
+                        padding-left: 20px;            
                         .numerotation_filtre {
                             @include btn_numero;
                             position: absolute; 
                             left: -12.5px;
-                        }
-                        .icon_filtre {
                             display: flex;
-                            justify-content: space-around;
                             align-items: center;
-                            align-content: center;
-                            height: 50px;
-                            width: 50px;
-                            border-radius: 30px;
-                            color: gray;
-                            
+                            justify-content: center;
+                        }
+                        .div_filtre {
+                            display: flex;
+                            align-items: center;
+                            padding-left: 5px;
+                            height: 30px;
+                            width: 30px;
+                            .icon_filtre {
+                                justify-content: space-around;
+                                align-items: center;
+                                align-content: center;
+                                color: gray;
+                            }
                         }
                         .icon_info {
                             display: flex;
@@ -394,7 +391,7 @@ body{
             }
         } 
 }
-
+                    //footer//
 .footer{
     height: 255px;
     width: 100%;
@@ -403,9 +400,6 @@ body{
             width: 100%;
             line-height: 0.1rem;
             display: flex;
-                p{
-                    font-size: 0.2rem;
-                }
                 h1{
                     font-family:"shrikhand", Impact, "Arial Black", Arial, Verdana, sans-serif;
                     color: white;
@@ -564,6 +558,7 @@ a {
         margin-bottom: 30px;
         margin-top: 30px;
         .filtre_card {
+            background: white;
             box-shadow: 0 4px 4px 0 #fff;
             box-shadow: 0 4px 4px 4px rgba(0, 0, 0, .2);
             width: 300px;
@@ -584,7 +579,6 @@ a {
                     transition:all 0.5s ease; 
                 }
                 .prix {
-                    background:$font-extra;
                     width: 45px;
                 }
                 .fa-check-circle {
@@ -600,6 +594,7 @@ a {
                 }
             }
             .card_text {
+                background: white;
                 display: flex;
                 flex-direction: column;
                 justify-content:center;
@@ -613,14 +608,14 @@ a {
                 white-space: nowrap; 
                     h3 {
                         margin: 0;
-                        font-size: 0.1rem;
+                        
                         color: black;
                         font-weight: bold;
                         margin: 0;
                     }
                     p {
                         margin: 0;
-                        font-size: 0.1rem;
+                        
                         color: black;
                         opacity: 0.5;
                     }
@@ -641,9 +636,9 @@ a {
                 overflow: hidden;
             }
             .prix {
+                background: white;
                 display: flex;
                 justify-content: flex-start;
-                background:$font-extra;
                 align-items:center;
                 color:black;
                 width: 50px;
@@ -659,7 +654,9 @@ a {
         }   
     }
 .filtre_card {
+    opacity: 0;
     animation: apparition $anim-dur;
+    animation-fill-mode: forwards;
     @for $i from 1 through $num-bars {
         &--#{$i} {
             animation-delay: $anim-delay * $i;
