@@ -20,9 +20,9 @@ $font-extra: #ebebeb;
 $anim-dur:2000ms;
 $num-bars: 10;
 $anim-delay: $anim-dur / $num-bars;
+
     //-------------------------------------------//
                         //accueil//
-
 a,
 h1,
 h2,
@@ -442,6 +442,9 @@ body{
         
 
 }
+
+//---------------------------------------------------------------//
+                       
                         //menu//
                     //header_menu//
 .header_menu {
@@ -539,6 +542,7 @@ a {
     text-decoration: none;
         
 }
+                //anim apparition//
 @keyframes apparition{
     0% {
         transform: translateY(40px);
@@ -659,6 +663,7 @@ a {
     opacity: 0;
     animation: apparition $anim-dur;
     animation-fill-mode: forwards;
+    
     @for $i from 1 through $num-bars {
         &--#{$i} {
             animation-delay: $anim-delay * $i;
